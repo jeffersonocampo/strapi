@@ -12,7 +12,7 @@ export default [
         'http://localhost:3000',      // Alternativo
         'http://127.0.0.1:5173',
         'http://127.0.0.1:4173',
-        'https://mentalidadcampeona.com/inspirafest'
+        'https://mentalidadcampeona.com'
       ],
       headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],
       methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'HEAD', 'OPTIONS'],
