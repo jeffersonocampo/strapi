@@ -1,0 +1,57 @@
+{
+    "kind": "collectionType",
+    "collectionName": "discount_codes",
+    "info": {
+        "singularName": "discount-code",
+        "pluralName": "discount-codes",
+        "displayName": "Discount Code",
+        "description": "Códigos de descuento para INSPIRA FEST"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "code": {
+            "type": "string",
+            "required": true,
+            "unique": true,
+            "minLength": 1,
+            "maxLength": 50
+        },
+        "type": {
+            "type": "enumeration",
+            "enum": ["percentage", "fixed"],
+            "required": true,
+            "default": "percentage"
+        },
+        "value": {
+            "type": "decimal",
+            "required": true,
+            "min": 0
+        },
+        "expiresAt": {
+            "type": "datetime",
+            "required": false
+        },
+        "description": {
+            "type": "text",
+            "required": false
+        },
+        "isActive": {
+            "type": "boolean",
+            "default": true,
+            "required": true
+        },
+        "maxUses": {
+            "type": "integer",
+            "required": false,
+            "min": 0
+        },
+        "usedCount": {
+            "type": "integer",
+            "default": 0,
+            "min": 0
+        }
+    }
+}
